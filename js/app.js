@@ -75,7 +75,7 @@ MovingCubes.prototype.createBoxes = function(){
 };
 
 MovingCubes.prototype.createFloor = function(){
-    var geometry2 = new THREE.PlaneGeometry( 500, 500); //use PlaneBufferGeometry  ? todo
+    var geometry2 = new THREE.PlaneBufferGeometry( 500, 500);
     var material2 = new THREE.MeshBasicMaterial( { color: 0xf2f2f2 } );
     var floor = new THREE.Mesh( geometry2, material2 );
     floor.material.side = THREE.DoubleSide;
