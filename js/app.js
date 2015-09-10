@@ -147,6 +147,8 @@ MovingCubes.prototype.onWindowResize = function(){
     that.camera.bottom = window.innerHeight / -2;
 
     that.renderer.setSize(window.innerWidth, window.innerHeight);
+    that.camera.aspect = window.innerWidth / window.innerHeight;
+    that.camera.updateProjectionMatrix();
 };
 
 var movingBoxes = new MovingCubes();
@@ -193,3 +195,15 @@ MovingCubes.prototype.displayAxes = function() {
 
     }
 };*/
+//GRID HELPER
+/*
+ var axes = new THREE.AxisHelper(50);
+ axes.position = 0; //or object's position
+ this.scene.add(axes);
+
+ var gridXZ = new THREE.GridHelper(100, 10);
+ gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
+ gridXZ.position.set(0,0,0 );
+ this.scene.add(gridXZ);
+ */
+
